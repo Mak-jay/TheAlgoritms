@@ -2,7 +2,7 @@ package com.TheAlgorithms.dataStructures.dynamicArray;
 
 import java.util.Iterator;
 
-@SuppressWarnings({})
+@SuppressWarnings(value = { "unchecked" })
 public class Array1 <T> implements Iterable<Object> {
 
     private T[] arr;
@@ -12,6 +12,8 @@ public class Array1 <T> implements Iterable<Object> {
     public Array1() 
     {this(16);}//array actual size 
     
+
+    //assign size to array
     public Array1(int size) {
         if (size < 0 )throw new IllegalArgumentException("Size must be > 0");
         this.size=size;
@@ -19,19 +21,27 @@ public class Array1 <T> implements Iterable<Object> {
 
     }
 
+    //get array's size
     public int size(){
         return len;
     }
+
+    //check for empty
     public boolean isEmpty(){
         return size() == 0;
     }
+
+    //get access element by index
     public T getElem(int index){
         return arr[index];
     }
+
+    //set element at certain index
     public void setElem(int index, T element){
         arr[index] = element;
     }
 
+    //clear whole array
     public void clear(){
         for (int i = 0; i < size; i++) {
             arr[i]=null;
@@ -70,6 +80,7 @@ public class Array1 <T> implements Iterable<Object> {
         return data;
     }
 
+    // remove by searching linearly
     public boolean remove(Object obj){
         for (int i = 0; i < len; i++) {
             if (arr[i].equals(obj)){
@@ -78,6 +89,7 @@ public class Array1 <T> implements Iterable<Object> {
     return false;
     }
 
+    //get index of element
     public int indexOf(Object obj){
         for (int i = 0; i < len; i++) {
             if (arr[i].equals(obj))
@@ -86,6 +98,7 @@ public class Array1 <T> implements Iterable<Object> {
     return -1;
     }
 
+    //check for array contains x element
     public boolean contains(Object obj){
         return indexOf(obj) != -1;
     }

@@ -3,7 +3,7 @@ package com.TheAlgorithms;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import com.TheAlgorithms.dataStructures.dynamicArray.Array1;
+import com.TheAlgorithms.dataStructures.linkedList.DoublyLinkedList;
 
 @SpringBootApplication
 public class AlgorithmsApplication {
@@ -11,17 +11,17 @@ public class AlgorithmsApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(AlgorithmsApplication.class, args);
 
-		Array1<Integer> myArr = new Array1<>();
-		myArr.addElem(1);
-		myArr.addElem(2);
+		DoublyLinkedList<Integer> myList = new DoublyLinkedList<>();
+		myList.add(1);
+		myList.add(2);
+		myList.add(3);
+		myList.add(4);
+		myList.add(5);
+		System.out.println(myList.toString());
 
-
-		System.out.println(myArr.isEmpty());
-		for (Object object : myArr) {
-			System.out.println(object);
-		}
-
-		System.out.println(myArr.size());
+		myList.removeAt(2);
+		System.out.println(myList.toString());
+		
 	}
 
 

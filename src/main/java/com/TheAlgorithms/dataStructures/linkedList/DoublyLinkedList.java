@@ -24,13 +24,14 @@ public class DoublyLinkedList<T> implements Iterable<T>{
         }
     }
 
+    //clear the list
     public void clear(){
         Node <T> trav = head;
         while (trav != null) { 
             Node <T> next = trav.next;
             trav.prev= trav.next=null; //setting current node's prev and next pointer to null
             trav.data = null; //Sets node's data to null
-            trav = next;
+            trav = next;//increment the trav 
         }
         head = tail = trav = null;
         size = 0;
@@ -261,6 +262,6 @@ public class DoublyLinkedList<T> implements Iterable<T>{
     sb.append(" ]");
     return sb.toString();
   }
-    
 
+  
 }

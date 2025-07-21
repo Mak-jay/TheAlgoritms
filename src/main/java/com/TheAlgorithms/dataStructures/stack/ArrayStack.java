@@ -47,7 +47,7 @@ public class ArrayStack<T> implements  Stack<T> {
 
 
     @Override
-    @SuppressWarnings("unchecked")
+    @SuppressWarnings("Unchecked")
     public T pop() {
        if(isEmpty()) throw  new EmptyStackException();
        T element = (T) data[--size];

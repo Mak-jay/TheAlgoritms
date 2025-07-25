@@ -3,18 +3,18 @@ package com.TheAlgorithms.dataStructures.dynamicArray;
 import java.util.Iterator;
 
 @SuppressWarnings(value = { "unchecked" })
-public class Array1 <T> implements Iterable<Object> {
+public class DynamicArray <T> implements Iterable<Object> {
 
     private T[] arr;
     private int len=0;
     private int size=0;
 
-    public Array1() 
+    public DynamicArray() 
     {this(16);}//array actual size 
     
 
     //assign size to array
-    public Array1(int size) {
+    public DynamicArray(int size) {
         if (size < 0 )throw new IllegalArgumentException("Size must be > 0");
         this.size=size;
         arr=(T[]) new Object[size];
@@ -36,7 +36,7 @@ public class Array1 <T> implements Iterable<Object> {
         return arr[index];
     }
 
-    //set element at certain index
+    //set element at specific index
     public void setElem(int index, T element){
         arr[index] = element;
     }
@@ -54,7 +54,6 @@ public class Array1 <T> implements Iterable<Object> {
     public void addElem(T element){
         //check if resizing needed
         if (len+1 >= size) {
-            
             if (size == 0)size += 1;//if size is zero
             else size *= 2; //double the size
             T[] newArr = (T[]) new Object[size];

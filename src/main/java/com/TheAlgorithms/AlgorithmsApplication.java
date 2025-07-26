@@ -1,8 +1,6 @@
 package com.TheAlgorithms;
 
-import java.util.ArrayList;
-
-import com.TheAlgorithms.dataStructures.problems.ArrayProblems.LeadersInArray;
+import com.TheAlgorithms.dataStructures.problems.ArrayProblems.RemoveDuplicates;
 
 
 
@@ -11,11 +9,12 @@ public class AlgorithmsApplication {
 
 	public static void main(String[] args) {
 
-		int[] array = {16,17,6,8,5,2};
+		int[] arr = {1,2,2,4,4,5,5};
+
+		System.out.println(arr.length);
+		int size = RemoveDuplicates.removeDuplicates(arr);
+		System.out.println(size);
 		
-		ArrayList<Integer> leader = LeadersInArray.getLearersWithSuffix(array);
-		for (int i : leader) {
-			System.out.print(i+" ");
-		}
+
 	}		
 }

@@ -1,5 +1,6 @@
 package com.TheAlgorithms.dataStructures.problems.ArrayProblems;
 
+
 import java.util.ArrayList;
 import java.util.Collections;
 
@@ -40,6 +41,4 @@ public class LeadersInArray {
         Collections.reverse(elements);
         return elements;
     }
-
-
 }

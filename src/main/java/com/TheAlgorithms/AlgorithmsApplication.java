@@ -1,19 +1,17 @@
 package com.TheAlgorithms;
 
-import com.TheAlgorithms.dataStructures.problems.ArrayProblems.RemoveDuplicates;
-
-
-
+import com.TheAlgorithms.dataStructures.problems.ArrayProblems.ReverseArray;
 
 public class AlgorithmsApplication {
 
 	public static void main(String[] args) {
 
-		int[] arr = {1,2,2,4,4,5,5};
+		int[] arr = {1,2,3};
 
-		System.out.println(arr.length);
-		int size = RemoveDuplicates.removeDuplicates(arr);
-		System.out.println(size);
+		ReverseArray.reverseArrayRec(arr);
+		for (int i = 0; i < arr.length; i++) {
+			System.out.print(arr[i]);
+		}
 		
 
 	}		

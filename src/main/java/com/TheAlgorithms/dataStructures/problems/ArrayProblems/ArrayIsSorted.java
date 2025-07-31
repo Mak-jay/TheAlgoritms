@@ -1,6 +1,6 @@
 package com.TheAlgorithms.dataStructures.problems.ArrayProblems;
 
-import java.util.HashSet;
+
 
 public class ArrayIsSorted {
 
